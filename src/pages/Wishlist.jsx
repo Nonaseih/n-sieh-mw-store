@@ -54,7 +54,7 @@ export default function WishlistPage() {
   }, [wish]);
 
   return (
-    <main className="container pt-[100px] pb-6 md:pt-[120px] md:pb-12">
+    <main className="container pt-[140px] pb-6 md:pt-[160px] md:pb-12">
 
       <h1 className="text-2xl md:text-3xl font-[var(--font-serif)] mb-8">Your Wishlist</h1>
 

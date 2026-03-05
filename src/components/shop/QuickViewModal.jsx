@@ -39,25 +39,25 @@ export default function QuickViewModal({ product, onClose }) {
   };
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 animate-fadeIn" onClick={handleBackdropClick}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-3 sm:p-4 animate-fadeIn" onClick={handleBackdropClick}>
       
-      <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 scale-100 animate-slideUp" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white w-full max-w-[calc(100vw-1.5rem)] sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] rounded-xl shadow-2xl overflow-y-auto transform transition-all duration-300 scale-100 animate-slideUp" onClick={(e) => e.stopPropagation()}>
         
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
-          <h2 className="font-semibold text-xl text-gray-900">{product.name}</h2>
-          <button onClick={onClose} className="text-2xl text-gray-500 hover:text-gray-700 transition cursor-pointer">×</button>
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 bg-gradient-to-r from-gray-50 to-white">
+          <h2 className="font-semibold text-base sm:text-xl text-gray-900 pr-2">{product.name}</h2>
+          <button onClick={onClose} className="text-xl sm:text-2xl text-gray-500 hover:text-gray-700 transition cursor-pointer">×</button>
         </div>
 
         {/* Content */}
-        <div className="flex flex-col md:flex-row gap-8 p-6">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-8 p-4 sm:p-6">
           
           {/* Image */}
           <div className="flex-1">
             <img
               src={product.image}
               alt={product.name}
-              className="rounded-lg w-full h-auto object-cover shadow-md"
+              className="rounded-lg w-full max-h-[38vh] sm:max-h-none h-auto object-cover shadow-md"
             />
           </div>
 

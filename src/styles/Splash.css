@@ -37,7 +37,6 @@
   width: 0%;
   background: linear-gradient(90deg, #DCC7B5 0%, #22223b 100%);
   border-radius: 6px;
-  animation: loader-bar-move 1.3s infinite cubic-bezier(.4,0,.2,1);
 }
 @keyframes loader-bar-move {
   0% { width: 0%; }
@@ -97,4 +96,31 @@
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
   text-align: center;
+}
+
+.splash-mw-status {
+  font-size: 0.78rem;
+  color: #6b7280;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  min-height: 1.1rem;
+  text-align: center;
+}
+
+.splash-mw-status-animate {
+  animation: splash-status-fade 650ms cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes splash-status-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }

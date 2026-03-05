@@ -70,7 +70,14 @@ function MiniFooterGuard() {
 
 function AppShell() {
   const { loading } = useAuth();
-  if (loading) return <Splash />;
+  const [minSplashElapsed, setMinSplashElapsed] = React.useState(false);
+
+  React.useEffect(() => {
+    const timeout = setTimeout(() => setMinSplashElapsed(true), 4200);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading || !minSplashElapsed) return <Splash />;
   return (
     <>
       <ScrollToTop />

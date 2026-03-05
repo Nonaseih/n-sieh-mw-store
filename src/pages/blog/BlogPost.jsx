@@ -354,7 +354,7 @@ export default function BlogPost() {
 
   return (
     <section key={slug} className="relative w-full overflow-hidden bg-white">
-      <div className="container pt-24 pb-12 md:py-20 lg:py-28 max-w-4xl">
+      <div className="container pt-[140px] pb-12 md:pt-[160px] md:pb-20 lg:pt-[180px] lg:pb-28 max-w-4xl">
         
         {/* Back Button */}
         <motion.div

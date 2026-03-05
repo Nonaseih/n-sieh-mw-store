@@ -221,7 +221,7 @@ export default function BlogArticles() {
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
-      <div className="container pt-28 pb-12 md:py-24 lg:py-32">
+      <div className="container pt-[140px] pb-12 md:pt-[160px] md:pb-24 lg:pt-[180px] lg:pb-32">
         
         {/* Header */}
         <motion.div
